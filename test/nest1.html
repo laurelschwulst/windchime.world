@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>firefly sanctuary</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="style.css?333">
+  <style>
+    body { background: black; }
+  </style>
+</head>
+
+<body id="nest">
+
+  <!-- <div id="copyright">
+    <span>©</span> 2022 f.s.
+  </div> -->
+
+  <!-- <div id="live"></div> -->
+
+  <iframe id="iframe" type="text/html" frameborder="0" width="480" height="394" src="https://wind.duskjacket.com" allowfullscreen></iframe>
+
+  <script>
+
+    // Mute a singular HTML5 element
+    function muteMe(elem) {
+        elem.muted = true;
+        elem.pause();
+    }
+
+    const nest = document.getElementById('iframe');
+
+    muteMe(nest);
+
+  </script>
+
+</body>
+
+</html>

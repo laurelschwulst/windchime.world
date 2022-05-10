@@ -1,0 +1,543 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'waxwing-2020';
+    src: url('fonts/waxwing-regular-update-2020-webfont.woff2') format('woff2'),
+        url('fonts/waxwing-regular-update-2020-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body, #mobile {
+  height: 100%;
+  background: LemonChiffon;
+  font-family: 'waxwing-2020', monospace;
+  font-size: 15px;
+  text-transform: lowercase;
+}
+
+body {
+  padding: 0 1.25em 3.5em;
+  text-align: center;
+  margin: 0;
+}
+
+a {
+  color: black;
+}
+
+h1 {
+  font-weight: normal;
+  margin: 0;
+  font-size: 1em;
+  padding-top: 3.5em;
+}
+
+h1 a {
+  text-decoration: none;
+}
+
+nav {
+  margin: 2.75em 0 5em;
+}
+
+nav a,
+.update span {
+  border: 1px solid #000;
+  display: inline-block;
+  padding: 0.5em 0.85em 0.35em;
+  text-decoration: none;
+  border-radius: 12px;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+}
+
+.update span {
+  cursor: default;
+}
+
+.update.click span:hover {
+  /* background: black;
+  color: LemonChiffon; */
+  cursor: pointer;
+}
+
+.update .hidden {
+  display: none;
+}
+
+nav a.current,
+nav a:hover {
+  background: black;
+  color: LemonChiffon;
+  /* border-style: solid; */
+  /* border-color: rgba(0,0,0,0.25); */
+  /* background: gold; */
+  /* background: #F6FC90; */
+}
+
+img {
+  max-width: 100%;
+  border-radius: 45px;
+  border-radius: 32px;
+  border-radius: 24px;
+  border-radius: 12px;
+}
+
+section {
+  margin: 5em 0 0;
+  line-height: 1.5;
+}
+
+section .about {
+  margin-top: 4.5em;
+}
+
+section.projects {
+}
+
+section.projects a {
+  display: block;
+  padding: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 24px;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1em;
+  line-height: 1.6;
+  border: 1px solid black;
+  text-decoration: none;
+  max-width: 750px;
+  margin-bottom: 1.5em;
+}
+
+section.projects a:hover {
+  background: black;
+  color: LemonChiffon;
+}
+
+section.projects h2,
+section.projects .subtitle,
+section.project-intro h2,
+section.project-intro .subtitle,
+section.projects .number {
+  text-align: center;
+}
+
+section.projects a img {
+  border-radius: 12px;
+  display: inline-block;
+  margin: 0 auto 1em;
+  box-shadow: 0px 0px 10px LemonChiffon;
+}
+
+section.projects h2,
+section.project-intro h2 {
+  font-size: 1em;
+  font-weight: normal;
+  margin: 0;
+  margin-bottom: 0.25em;
+}
+
+section.projects .subtitle,
+section.project-intro .subtitle {
+  font-size: 1em;
+}
+
+section.tour,
+section.tour-intro,
+section.project-intro,
+section.project-content {
+  max-width: 750px;
+  padding: 50px;
+  /* border: 1px solid black; */
+  background: black;
+  color: LemonChiffon;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 24px;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+section.project-intro {
+  margin-bottom: 1.5em;
+  border: 1px solid black;
+}
+
+section.project-content {
+  margin-top: 1.5em;
+}
+
+section.tour-intro,
+section.project-content {
+  color: black;
+  background: LemonChiffon;
+  border: 1px solid black;
+}
+
+section.tour-intro a {
+  text-decoration: none;
+  /* border: 1px dotted black;
+  padding: 2px 5px 0; */
+  border-bottom: 1px solid black;
+}
+
+section.tour-intro a:hover {
+  background: black;
+  color: LemonChiffon;
+}
+
+section.tour a {
+  color: LemonChiffon;
+  text-decoration: none;
+  border-bottom: 1px solid LemonChiffon;
+}
+
+section.tour a:hover {
+  background: LemonChiffon;
+  color: black;
+}
+
+section.project-content a {
+  text-decoration: none;
+  border-bottom: 1px solid black;
+}
+
+section.project-content a:hover {
+  color: LemonChiffon;
+  background: black;
+}
+
+section.tour p,
+section.project-content p {
+  margin: 1.75em auto;
+}
+
+section.tour p:first-child,
+section.project-content p:first-child {
+  margin-top: 0;
+}
+
+section.project-content p:last-child {
+  margin-bottom: 0;
+}
+
+section.tour img,
+section.project-content img {
+  border-radius: 12px;
+  display: inline-block;
+  margin: 1em auto;
+  box-shadow: 0px 0px 10px LemonChiffon;
+}
+
+section.project-content,
+section.tour {
+  margin-bottom: 1.5em;
+}
+
+section.project-content img {
+  margin: 0;
+}
+
+section.project-content figure {
+  margin: 2.5em auto;
+}
+
+section.project-content figure:first-child {
+  margin-top: 0;
+}
+
+figcaption {
+  /* font-size: 0.7em; */
+  opacity: 0.4;
+  margin-top: 0.25em;
+}
+
+blockquote {
+  border-left: 1px dashed black;
+  margin-left: 0;
+  padding-left: 2.5em;
+  margin: 2.5em auto;
+}
+
+#left {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  z-index: 2;
+  background: LemonChiffon;
+  overflow-y: scroll;
+  padding: 3.25em;
+}
+
+#right {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  z-index: 1;
+}
+
+#right iframe,
+body#nest iframe {
+  height: 100vh;
+  width: 200vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+body#nest {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+h2.year {
+  font-size: 1em;
+  font-weight: normal;
+  margin: 0;
+  margin-top: 2em;
+}
+
+h2.year:first-child {
+  margin-top: 0;
+}
+
+footer {
+  /* font-size: 0.75em; */
+  text-align: center;
+  margin-top: 7.5em;
+  padding-bottom: 3.25em;
+}
+
+#perma {
+  text-align: center;
+  margin-top: 2.5em;
+}
+
+#perma a {
+  text-decoration: none;
+}
+
+#copyright {
+  color: LemonChiffon;
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  z-index: 3;
+  font-size: 0.5em;
+  padding: 1em;
+  background: rgba(0,0,0,0.4);
+  border-radius: 12px;
+}
+
+#copyright span {
+  font-size: 1.25em;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+a.tour-link {
+  background: black;
+  color: LemonChiffon;
+}
+
+a.project-link {
+  background: LemonChiffon;
+  color: black !important;
+}
+
+#live {
+  position: absolute;
+  bottom: 1.75em;
+  right: 1.75em;
+  height: .75em;
+  width: .75em;
+  /* border-radius: 50%; */
+  color: LemonChiffon;
+  font-size: 2em;
+  font-family: 'waxwing-2020', monospace;
+
+  /* background: LemonChiffon;
+  box-shadow: 0 0 5px 8px LemonChiffon; */
+
+  /* animation-name: glow;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease; */
+}
+
+/* @keyframes glow {
+  0% {
+    background-color: LemonChiffon;
+    box-shadow: 0 0 8px 10px LemonChiffon;
+  }
+  25% {
+    background-color: LemonChiffon;
+    box-shadow: 0 0 10px 12px LemonChiffon;
+  }
+  35% {
+    background-color: LemonChiffon;
+    box-shadow: 0 0 10px 12px LemonChiffon;
+  }
+  60% {
+    background-color: LemonChiffon;
+    box-shadow: 0 0 8px 10px LemonChiffon;
+  }
+  100% {
+    background-color: LemonChiffon;
+    box-shadow: 0 0 8px 10px LemonChiffon;
+  }
+} */
+
+/* #mobile {
+  display: none;
+} */
+
+#mobile {
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 10px;
+}
+
+#mobile .inside {
+}
+
+#blocks {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 8px;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+#blocks a.block {
+  position: relative;
+  padding: 50px;
+  /* height: 300px; */
+  /* min-height: 300px; */
+  /* max-height: 300px; */
+  overflow: hidden;
+  overflow-y: auto;
+  border-radius: 24px;
+  border: 1px solid #000;
+  text-decoration: none;
+}
+
+#blocks a.block:hover {
+  background: black;
+  color: lemonchiffon;
+}
+
+#blocks a.block.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#blocks a.block h2 {
+  font-size: 1em;
+  line-height: 1.6;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+#blocks a.block.special-tour {
+  background: black;
+  color: lemonchiffon;
+}
+
+#blocks a.block.special-tour img {
+  /* filter: invert(1); */
+}
+
+table.shopping, table.shopping tr, table.shopping td {
+  border-collapse: collapse;
+  border: 1px solid black;
+  margin: 0;
+  padding: 0;
+}
+table.shopping td {
+  padding: 0.5em;
+  font-size: 13.75px;
+}
+table.shopping td.image {
+  padding: 0;
+  width: 75px;
+}
+table.shopping td.image img {
+  display: block;
+  border-radius: 0;
+}
+table.shopping td.label {
+  text-align: center;
+}
+
+img.shopping {
+  border-radius: 0 !important;
+  mix-blend-mode: multiply;
+}
+/* #blocks a.block.special-tour:hover {
+  background: lemonchiffon;
+  color: black;
+} */
+
+@media (max-width: 1200px) {
+  #blocks {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 850px) {
+  body {
+    padding: 0 0.5em 0;
+  }
+  #blocks {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  #blocks {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  section.tour, section.tour-intro, section.project-intro, section.project-content {
+    padding: 25px;
+  }
+  section.project-intro {
+    margin-bottom: 0.75em;
+  }
+  section.project-content {
+    margin-top: 0.75em;
+  }
+}
+
+@media (max-width: 350px) {
+  #blocks {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #blocks a.block {
+    padding: 25px;
+  }
+  #blocks a.block img {
+    padding: 50px;
+  }
+}
