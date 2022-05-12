@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>firefly sanctuary</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="style.css?333">
+  <style>
+    body { background: black; }
+  </style>
+</head>
+
+<body id="nest">
+
+  <h1 id="prompt">
+      Click anywhere to begin
+    </h1>
+
+    <video-js id="vid2" width="600" height="300">
+      <source
+        src="https://stream-uc2-alfa.dropcam.com:443/nexus_aac/b2e3165f6f90434c80254fb1ebc4ec2e/playlist.m3u8?public=NVnP3EmAA3"
+        type="application/x-mpegURL"
+      />
+    </video-js>
+    <link
+      href="https://unpkg.com/video.js/dist/video-js.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/video.js/dist/video.min.js"></script>
+    <script src="https://unpkg.com/@videojs/http-streaming@2.14.2/dist/videojs-http-streaming.min.js"></script>
+    <script>
+      var player2 = videojs("vid2");
+      let prompt = document.getElementById("prompt");
+      document.addEventListener("click", () => {
+        player2.play();
+      });
+      // player.el_.addEventListener("click", () => {
+      //   player.play();
+      //   player2.pause();
+      //   // prompt.remove();
+      // });
+      // player2.el_.addEventListener("click", () => {
+      //   player2.play();
+      //   player.pause();
+      //   // prompt.remove();
+      // });
+      // player.play();
+
+      // player2.play();
+      // prompt.innerText = "";
+    </script>
+    <style>
+      h1 {
+        font-family: monospace;
+        color: white;
+        text-align: center;
+      }
+      video-js {
+        width: 100% !important;
+      }
+      body {
+        background-color: black;
+        margin: 0;
+      }
+    </style>
+    <script crossorigin type="text/javascript" src="https://codesandbox.io/static/js/watermark-button.be960f43b.js"></script>
+
+</body>
+
+</html>
