@@ -62,18 +62,19 @@ let videoDatas = [
       "https://seashell.family/videos/oliver-10pm.mp4"
     ],
     gmtOffset: 10,
-    volume: 0.8
+    volume: 0.5
   },
   {
     name: "Lola Orge Benech",
     place: "Buenos Aires, Argentina",
     src: [
+      "https://seashell.family/videos/lola-10pm.mp4",
       "https://seashell.family/videos/lola-7am.mp4",
       "https://seashell.family/videos/lola-11am.mp4",
       "https://seashell.family/videos/lola-2pm.mp4",
-      "https://seashell.family/videos/lola-6pm.mp4",
+      // "https://seashell.family/videos/lola-6pm.mp4",
       "https://seashell.family/videos/lola-7pm.mp4",
-      "https://seashell.family/videos/lola-8pm.mp4",
+      // "https://seashell.family/videos/lola-8pm.mp4",
       "https://seashell.family/videos/lola-10pm.mp4"
     ],
     gmtOffset: -3,
@@ -131,8 +132,8 @@ let videojselement = document.getElementById("vid1");
 
 if (Array.isArray(videoData.src)) {
   let src = getVideoSource(videoData.src, videoData.gmtOffset);
-  videojselement.outerHTML = ` 
-  <video-js 
+  videojselement.outerHTML = `
+  <video-js
   controls
     id="vid1">
       <source src="${src}"/>
@@ -140,8 +141,8 @@ if (Array.isArray(videoData.src)) {
 } else {
   let src = videoData.src;
   console.log(videoData.type);
-  videojselement.outerHTML = ` 
-  <video-js 
+  videojselement.outerHTML = `
+  <video-js
     poster="${videoData.poster}"
     id="vid1">
       <source src="${src}" type="${videoData.type}"/>
