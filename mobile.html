@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wind Chime Festival</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <link
+      href="https://unpkg.com/video.js/dist/video-js.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?334" />
+  </head>
+
+  <body style="height: auto;">
+    <div>
+      welcome to the world wide wind chime festial, from may 21 – july 31, 2022.
+      for the full experience, please visit this website
+      (https://windchime.world) on a desktop browser!
+    </div>
+    <iframe src="https://vi49k6.csb.app/?cam=0" id="mobile"> </iframe>
+  </body>
+  <script>
+    let iframe = document.getElementById("mobile");
+    iframe.src = `https://vi49k6.csb.app/?cam=${(Math.random() * 8) | 0}`;
+  </script>
+</html>

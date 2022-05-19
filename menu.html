@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wind Chime Festival</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <link
+      href="https://unpkg.com/video.js/dist/video-js.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?334" />
+  </head>
+
+  <body class="menu">
+    <div class="title slide" id="title">
+      world<br />
+      wide<br />
+      wind<br />
+      chime<br />
+      festival
+      <div id="presence">( 5 are here )</div>
+      <a href="#menu" class="menu button">( menu )</a>
+    </div>
+    <div class="menu-options slide" id="menu">
+      <a href="menu-about.html">( about )</a><br /><br />
+      <a href="menu-events.html">( events )</a><br /><br />
+      <a href="menu-support.html">( support )</a>
+      <a href="#title" class="menu">( x )</a>
+    </div>
+  </body>
+  <script>
+    let presence = document.getElementById("presence");
+    const socket = new WebSocket("wss://wind-chime.maxbittker.repl.co");
+
+    let prevCount = 0;
+    socket.addEventListener("message", function (e) {
+      console.log(e.data);
+      let count = parseInt(e.data, 10);
+      if (count > 1) {
+        presence.innerText = "( " + count + " are here )";
+      } else {
+        presence.innerText = "( you are the only one here )";
+      }
+
+      if (prevCount !== count) {
+        const event = new Event("enter");
+        document.dispatchEvent(event);
+      }
+      prevCount = count;
+    });
+    let pingTimeout;
+    socket.addEventListener("open", function (e) {
+      console.log("opened");
+      heartbeat();
+    });
+
+    function heartbeat() {
+      clearTimeout(this.pingTimeout);
+      pingTimeout = setTimeout(() => {
+        heartbeat();
+      }, 5000);
+    }
+
+    socket.addEventListener("close", function clear() {
+      clearTimeout(pingTimeout);
+    });
+
+    const sounds = [
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325014__kilo-one-nine__toy-glock-01.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325013__kilo-one-nine__toy-glock-02.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325012__kilo-one-nine__toy-glock-03.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325011__kilo-one-nine__toy-glock-04.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325018__kilo-one-nine__toy-glock-05.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325017__kilo-one-nine__toy-glock-06.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325016__kilo-one-nine__toy-glock-07.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325015__kilo-one-nine__toy-glock-08.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325020__kilo-one-nine__toy-glock-09.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325019__kilo-one-nine__toy-glock-10.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325029__kilo-one-nine__toy-glock-11.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325028__kilo-one-nine__toy-glock-12.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325027__kilo-one-nine__toy-glock-13.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325026__kilo-one-nine__toy-glock-14.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325033__kilo-one-nine__toy-glock-15.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325032__kilo-one-nine__toy-glock-16.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325031__kilo-one-nine__toy-glock-17.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325030__kilo-one-nine__toy-glock-18.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325035__kilo-one-nine__toy-glock-19.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325034__kilo-one-nine__toy-glock-20.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325023__kilo-one-nine__toy-glock-21.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325024__kilo-one-nine__toy-glock-22.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325021__kilo-one-nine__toy-glock-23.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325022__kilo-one-nine__toy-glock-24.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325025__kilo-one-nine__toy-glock-25.mp3"
+    ];
+
+    let soundBin = [];
+    const events = ["mousedown", "enter", "leave"]; // 'keyup' is pretty wild haha
+
+    const playSound = (s, a) => {
+      const audio = document.createElement("audio");
+      audio.src = s;
+      audio.volume = a;
+      audio.play();
+    };
+
+    events.forEach((evt) => {
+      document.addEventListener(evt, (e) => {
+        if (e.type === "enter") {
+          playSound(sounds[prevCount % sounds.length], 0.15);
+        } else if (e.type === "mousedown") {
+          playSound(sounds[(e.pageX + e.pageY) % sounds.length], 0.01);
+        }
+      });
+    });
+  </script>
+</html>
