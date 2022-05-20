@@ -62,7 +62,7 @@ let videoDatas = [
       "https://seashell.family/videos/oliver-10pm.mp4"
     ],
     gmtOffset: 10,
-    volume: 0.5
+    volume: 0.2
   },
   {
     name: "Lola Orge Benech",
