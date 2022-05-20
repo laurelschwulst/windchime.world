@@ -23,7 +23,7 @@
     and all it contains. We are windblown. And, while one of the consequences
     of this openness may be bouts of influenza, another could be the very
     existence of life itself."
-    <span class="gray">— Lyall Watson, Heaven's Breath: A Natural History of 
+    <span class="gray">— Lyall Watson, Heaven's Breath: A Natural History of
     the Wind (1984)</span><br /><br />
     Welcome to the world wind chime festival, a virtual exhibition in which
     artists from across the globe present their own live-streamed wind
@@ -302,6 +302,15 @@
 
   </div>
   </div>
+  <script>
+  const hours = new Date().getHours();
+  const isDayTime = hours > 6 && hours < 20;
+  if (isDayTime) {
+    document.body.classList.add("day");
+  } else {
+    document.body.classList.add("night");
+  }
+  </script>
 </body>
 
 </html>

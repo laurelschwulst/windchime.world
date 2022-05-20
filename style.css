@@ -1,9 +1,19 @@
 :root {
-  --bg-color: #e0ffff;
+  /* --bg-color: #e0ffff; */
   --bg-color: #d1d0cf;
   --fg-color: black;
   --fg-2-color: #bbb;
+  --bg-color-day: #d1d0cf;
+  --fg-color-day: #0000e8;
+  --gray-color-day: #888888;
+  /* --bg-color-night: #cbd1e3; */
+  --bg-color-night: #e2e7f6;
+  --fg-color-night: #0000e8;
+  /* --gray-color-night: #A4A4D4; */
+  --gray-color-night: #9B9BDF;
   --spinner-color: #d1d0cf;
+  --spinner-color-day: #d1d0cf;
+  --spinner-color-night: #cbd1e3;
 }
 
 * {
@@ -42,6 +52,33 @@ html,
 video-js {
   background-color: var(--bg-color) !important;
 }
+
+/* body.day,
+body.day a {
+  background-color: var(--bg-color-day) !important;
+  color: var(--fg-color-day) !important;
+}
+
+body.night,
+body.night a,
+body.night #shade-top,
+body.night #shade-bottom,
+body.night .slide {
+  background-color: var(--bg-color-night) !important;
+  color: var(--fg-color-night) !important;
+}
+
+body.night .gray,
+body.night #presence {
+  color: var(--gray-color-night) !important;
+}
+
+body.night .vjs-seeking .vjs-loading-spinner::after,
+body.night .vjs-seeking .vjs-loading-spinner::before,
+body.night .vjs-waiting .vjs-loading-spinner::after,
+body.night .vjs-waiting .vjs-loading-spinner::before {
+  color: var(--spinner-color-night) !important;
+} */
 
 h1 {
   font-weight: normal;
