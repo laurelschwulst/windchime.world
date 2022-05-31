@@ -19,7 +19,7 @@ let videoDatas = [
   },
   {
     name: "Lucia Leuci",
-    place: "Milan, Italy",
+    place: "Torre Santa Susana, Italy",
     gmtOffset: 1,
 
     src:
@@ -90,8 +90,16 @@ let videoDatas = [
     volume: 0.6
   },
   {
+    name: "Raque Ford",
+    place: "Jeffersonville, NY",
+    gmtOffset: -4,
+    src: "https://stream-us1-bravo.dropcam.com:443/nexus_aac/46d1d742aac746ef9199bfd4cd27b9b1/playlist.m3u8?public=1UCAihpUjo",
+    type: "application/x-mpegURL",
+    poster: "snapshot-raque.png"
+  },
+  {
     name: "Monica Hofstadter",
-    place: "Brooklyn, NY",
+    place: "( coming soon )",
     gmtOffset: -4,
     src: "",
     type: "application/x-mpegURL",
@@ -99,16 +107,8 @@ let videoDatas = [
   },
   {
     name: "Hiroki Yamasaki",
-    place: "Okazaki, Japan",
+    place: "( coming soon )",
     gmtOffset: 9,
-    src: "",
-    type: "application/x-mpegURL",
-    poster: ""
-  },
-  {
-    name: "Raque Ford",
-    place: "Jeffersonville, NY",
-    gmtOffset: -4,
     src: "",
     type: "application/x-mpegURL",
     poster: ""
