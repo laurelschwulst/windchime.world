@@ -19,8 +19,8 @@ let videoDatas = [
   },
   {
     name: "Lucia Leuci",
-    place: "Torre Santa Susana, Italy",
-    gmtOffset: 1,
+    place: "Torre Santa Susanna, Italy",
+    gmtOffset: 2,
 
     src:
       "https://stream-ue1-bravo.dropcam.com:443/nexus_aac/0136a6d6863e413c90db5e224187e101/playlist.m3u8?public=byvNVd0QDR",
@@ -98,7 +98,7 @@ let videoDatas = [
     poster: "snapshot-raque.png"
   },
   {
-    name: "Monica Hofstadter",
+    name: "Monica Hofstadter + family",
     place: "( coming soon )",
     gmtOffset: -4,
     src: "",
