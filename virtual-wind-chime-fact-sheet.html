@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>virtual wind chime fact sheet</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-size=1.0" />
+  <link rel="stylesheet" href="style.css?333" />
+  <style media="screen">
+
+    body {
+      padding: 25px;
+      line-height: 1.6;
+    }
+
+    .hide {
+      opacity: 1;
+    }
+
+    /* [v-cloak] { display: none; } */
+
+    /* table, tr, td {
+      border: 1px solid #aaa;
+      border-collapse: collapse;
+    } */
+
+    .chime {
+      margin-bottom: 5em;
+      display: flex;
+    }
+
+    .photo {
+      max-width: 350px;
+    }
+
+    .info {
+      max-width: 500px;
+      padding-left: 25px;
+    }
+
+    img {
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    /* @media print {
+
+      body {
+        font-size: 12px;
+      }
+
+      .info, .photo {
+        display: inline-block;
+        vertical-align: top;
+        max-width: 250px;
+      }
+
+    } */
+
+  </style>
+</head>
+
+<body>
+
+  world wide wind chime festival<br><br>
+
+may 21 – july 31, 2022<br><br>
+
+<a href="https://windchime.world">https://windchime.world</a><br><br><br><br>
+
+* * *<br><br><br><br>
+
+  <div id="wind-index">
+
+  <div v-for="record in records" v-bind:class="windClasses(record)">
+    <div class="chime">
+        <div class="photo" v-if="record.fields['Photos'][0].url">
+          <img v-bind:src="record.fields['Photos'][0].url">
+        </div>
+        <div class="info">
+          <div v-if="record.fields['Artist']">
+            artist:<br>
+            {{ record.fields['Artist'] }}<br><br>
+          </div>
+
+          <div v-if="record.fields['Title']">
+            title:<br>
+            {{ record.fields['Title'] }}<br><br>
+          </div>
+
+          <div v-if="record.fields['Materials']">
+            materials:<br>
+            {{ record.fields['Materials'] }}<br><br>
+          </div>
+
+          <div v-if="record.fields['About']">
+            about:<br>
+            {{ record.fields['About'] }}<br><br>
+          </div>
+
+          <div v-if="record.fields['Link 1']">
+            <a v-if="record.fields['Link 1']" :href="record.fields['Link 1']" target="_blank">{{ record.fields['Link 1 Text'] }}</a><br>
+          </div>
+
+          <div v-if="record.fields['Link 2']">
+            <a v-if="record.fields['Link 2']" :href="record.fields['Link 2']" target="_blank">{{ record.fields['Link 2 Text'] }}</a><br><br>
+          </div>
+
+        </div>
+  </div>
+
+</div>
+
+<div style="clear: both; margin-bottom: 1em;"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.min.js"></script>
+
+  <script>
+
+  /* airtable vue */
+
+  Vue.config.devtools = true;
+  const hiddenAtFirst = document.querySelectorAll(".hide");
+
+  var apiURL = "https://api.airtable.com/v0/apph8eIDkGX6llwHn/Table%201?api_key=keyCZaOeYEDwQl6C6&sort%5B0%5D%5Bfield%5D=Artist&sort%5B0%5D%5Bdirection%5D=asc";
+  app = new Vue({
+    el: '#wind-index',
+    data: {
+      records: null,
+      timer: null
+    },
+    created: function () {
+      this.fetchData();
+    },
+    beforeDestroy: function() {
+      clearInterval(this.timer)
+    },
+    methods: {
+      windClasses: function(record) {
+        return {
+        }
+      },
+      fetchData: function () {
+        var xhr = new XMLHttpRequest()
+        var self = this
+        xhr.open('GET', apiURL)
+        xhr.onload = function () {
+          self.records = JSON.parse(xhr.responseText).records
+          console.log("Fetched data.");
+        }
+        xhr.send()
+      }
+    }
+  })
+
+  </script>
+
+</body>
+
+</html>
