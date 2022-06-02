@@ -87,6 +87,11 @@ may 21 – july 31, 2022<br><br>
             {{ record.fields['Artist'] }}<br><br>
           </div>
 
+          <div v-if="record.fields['Location']">
+            location:<br>
+            {{ record.fields['Location'] }}<br><br>
+          </div>
+
           <div v-if="record.fields['Title']">
             title:<br>
             {{ record.fields['Title'] }}<br><br>
