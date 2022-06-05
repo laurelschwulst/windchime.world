@@ -99,19 +99,27 @@ let videoDatas = [
   },
   {
     name: "Monica Hofstadter + family",
-    place: "( coming soon )",
+    place: "Brooklyn, NY",
     gmtOffset: -4,
-    src: "",
+    src: "https://stream-uc2-delta.dropcam.com:443/nexus_aac/75a9254f4e304d95b79f3d6169df7f41/playlist.m3u8?public=XWe5KaRMbu",
     type: "application/x-mpegURL",
-    poster: ""
+    poster: "snapshot-monica.png"
   },
   {
     name: "Hiroki Yamasaki",
-    place: "( coming soon )",
+    place: "Okazaki, Japan",
+    src: [
+      "https://seashell.family/videos/hiroki-9am.mp4",
+      "https://seashell.family/videos/hiroki-12pm.mp4"
+      "https://seashell.family/videos/hiroki-6pm.mp4",
+      "https://seashell.family/videos/hiroki-3pm.mp4",
+      "https://seashell.family/videos/hiroki-9pm.mp4",
+      "https://seashell.family/videos/hiroki-12am.mp4",
+      "https://seashell.family/videos/hiroki-12am.mp4",
+      "https://seashell.family/videos/hiroki-12am.mp4"
+    ],
     gmtOffset: 9,
-    src: "",
-    type: "application/x-mpegURL",
-    poster: ""
+    poster: "snapshot-hiroki.png"
   }
 ];
 
