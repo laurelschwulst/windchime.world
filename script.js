@@ -119,7 +119,8 @@ let videoDatas = [
       "https://seashell.family/videos/hiroki-12am.mp4",
       "https://seashell.family/videos/hiroki-12am.mp4",
       "https://seashell.family/videos/hiroki-12am.mp4"
-    ]
+    ],
+    volume: 0.5
   }
 ];
 
