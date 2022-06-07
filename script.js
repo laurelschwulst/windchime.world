@@ -111,13 +111,13 @@ let videoDatas = [
     gmtOffset: 9,
     poster: "snapshot-hiroki.png",
     src: [
+      "https://seashell.family/videos/hiroki-12am.mp4",
+      "https://seashell.family/videos/hiroki-12am.mp4",
       "https://seashell.family/videos/hiroki-9am.mp4",
       "https://seashell.family/videos/hiroki-12pm.mp4",
       "https://seashell.family/videos/hiroki-3pm.mp4",
       "https://seashell.family/videos/hiroki-6pm.mp4",
       "https://seashell.family/videos/hiroki-9pm.mp4",
-      "https://seashell.family/videos/hiroki-12am.mp4",
-      "https://seashell.family/videos/hiroki-12am.mp4",
       "https://seashell.family/videos/hiroki-12am.mp4"
     ],
     volume: 0.5
