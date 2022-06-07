@@ -78,8 +78,10 @@ may 21 – july 31, 2022<br><br>
 
   <div v-for="record in records" v-bind:class="windClasses(record)">
     <div class="chime">
-        <div class="photo" v-if="record.fields['Photos'][0].url">
-          <img v-bind:src="record.fields['Photos'][0].url">
+        <div v-if="record.fields['Photos']" class="photo">
+          <div v-if="record.fields['Photos'][0].url">
+            <img v-bind:src="record.fields['Photos'][0].url">
+          </div>
         </div>
         <div class="info">
           <div v-if="record.fields['Artist']">
