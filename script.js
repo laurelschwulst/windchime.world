@@ -4,7 +4,7 @@ let videoDatas = [
     place: "Oakland, CA",
     gmtOffset: -7,
     src:
-      "https://stream-uc2-bravo.dropcam.com:443/nexus_aac/e2d3307eebaf433b81f14f048a0352e7/playlist.m3u8?public=As0LOLu0fQ",
+      "https://stream-uc2-bravo.dropcam.com:443/nexus_aac/e2d3307eebaf433b81f14f048a0352e7/playlist.m3u8?public=6qIiWoiJ4A",
     type: "application/x-mpegURL",
     poster: "snapshot-anna.jpg"
   },
