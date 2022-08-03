@@ -53,11 +53,65 @@
         border-left: 1px solid #F6F5F6;
       }
       section.beginning {
-        background:url('irl-festival/windchime-13.jpg');
+        background:url('irl-festival/vale05.jpg');
         background-size: cover;
+        background-position: center center;
       }
-    </style>
-  </head>
+      .info {
+        text-align: center;
+        background: #d1d0cf;
+        color: #d1d0cf;
+        padding: 10vw 8.5vw;
+        box-shadow: 0px 0px 12px rgba(0,0,0,0.5);
+        position: relative;
+      }
+      .poster {
+        -webkit-text-stroke: 1px black;
+        font-family: "Monotype Corsiva", cursive;
+        font-size: 7.5vw;
+        line-height: 1;
+        text-transform: none;
+        pointer-events: none;
+      }
+      .label {
+        position: absolute;
+        padding: 1em;
+        left: 0;
+        right: 0;
+        top: 0;
+        text-align: center;
+        color: black;
+      }
+      .everywhere {
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .everywhere .info,
+      .everywhere .poster,
+      .everywhere .green {
+        transition: .1s background ease-out;
+        -webkit-transition: .1s background ease-out;
+        -moz-transition: .1s background ease-out;
+        -o-transition: .1s background ease-out;
+      }
+      .everywhere:hover .info {
+        background: white;
+      }
+      .everywhere:hover .poster {
+        color: #6385C8;
+        -webkit-text-stroke: 1px transparent;
+      }
+      .everywhere:hover .poster .green {
+        color: #63AD57;
+      }
+      section.welcome {
+        height: 65vh;
+        padding: 5vh;
+      }
+      </style>
+    </head>
 
   <body>
     <section class="beginning">
@@ -366,6 +420,20 @@
         Special thanks to Max Neely-Cohen for the written reflection and Cindy Hwang for the video recording.
       </p>
     </section>
+    <!-- <section class="welcome">
+      <div class="everywhere">
+        <div class="info">
+          <div class="label">( irl )</div>
+          <div class="poster">
+            w<span class="green">in</span>d chi<span class="green">m</span>e<br>
+            f<span class="green">e</span>stiv<span class="green">a</span>l <span class="green">N</span>YC<br>
+            <span class="green">ma</span>y 21, 20<span class="green">22</span><br>
+            <span class="green">v</span>a<span class="green">l</span>e of c<span class="green">as</span>hm<span class="green">e</span>re<br>
+            11<span class="green">a</span>m – <span class="green">4</span>pm
+          </div>
+        </div>
+      </div>
+    </section> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
     $(function() {
