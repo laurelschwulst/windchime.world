@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wind Chime Festival</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <link
+      href="https://unpkg.com/video.js/dist/video-js.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?334" />
+  </head>
+
+  <body class="menu content">
+    <div class="slide" id="top">
+      ( virtual exhibition ) <a href="mobile.html#menu" class="menu return">( x )</a
+      ><br /><br />
+
+      The virtual wind chime festival was open from May 21 – July 31, 2022.<br><br>
+
+      For this “World Wide Wind Chime Festival,” we sent web cameras to artists around the world — so that they could live-stream a wind chime of their own creation on our website. The chimes could then be experienced simultaneously on the site, swaying and ringing in chorus with one another even though they are many thousands of miles apart. We hoped visitors could experience an ambient, elemental interconnectedness that moves across continents!
+      <br><br>
+      Some people have said the virtual exhibition itself is like an instrument of not only chimes but live ambient sounds around the world: the wind in California paired with the rain in Australia accompanied by the early morning chickens in Italy.<br><br>
+
+      Artists of the virtual wind chime exhibition include Anna Reutinger (Netherlands + Oakland, CA), Anna Sew Hoy + Giles Miller + family (Los Angeles, CA), Lola Orge Benech (Buenos Aires, Argentina), Lucia Leuci (Torre Santa Susanna, Italy), Mark Beasley (San Pedro, CA), Oliver Hull (Melbourne, Australia), Weiyi Li (Beijing, China), Willa Smart (Davis, CA), Hiroki Yamasaki (Okazaki, Japan), Monica Hofstadter + family (Brooklyn, NY), and Raque Ford (Jefferson, NY).<br><br>
+
+      You can experience documentation from the event on the desktop version of this website, http://windchime.world.<br><br>
+      <a href="#top" class="return">( ^ )</a>
+    </div>
+    <script>
+    const hours = new Date().getHours();
+    const isDayTime = hours > 6 && hours < 20;
+    if (isDayTime) {
+      document.body.classList.add("day");
+    } else {
+      document.body.classList.add("night");
+    }
+    </script>
+  </body>
+</html>

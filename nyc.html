@@ -8,11 +8,365 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
     />
     <link rel="stylesheet" href="style.css?334" />
+    <style>
+      html, body {
+        margin: 0;
+        background-color: #929192 !important;
+      }
+      img {
+        max-height: 100%;
+      }
+      section.images {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1px;
+      }
+      section.images.pola {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 1px;
+      }
+      .image {
+        text-align: center;
+        max-height: 33.333vw;
+        padding: 2.5em;
+        background: #d1d0cf;
+        border-top: 1px solid #F6F5F6;
+        border-left: 1px solid #F6F5F6;
+        cursor: zoom-in;
+      }
+      .image.large {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 3;
+        max-height: 100%;
+        cursor: zoom-out;
+      }
+      .text {
+        background: #d1d0cf;
+        padding: 2.5em;
+        border: 1px solid #929192;
+        border-top: 1px solid #F6F5F6;
+        border-left: 1px solid #F6F5F6;
+      }
+    </style>
   </head>
 
   <body>
-    <p>
-      The wind chimes reveal themselves slowly. Beacons tucked into corners, on the next little ridge, up the path, hidden right above your head. You must keep your eyes peeled. Ask questions. Watch the flow of others on their visits and discoveries. The wind chimes and their creators surround you by the very fact of geology in the Vale of Cashmere. The vale is a dip in the earth, a hole created by a glacier melting 17,000 years ago and tearing rock and soil into an arena of blue and green. You walk in the center, around the pond, ringed by trees, braving short distances of sun. Each branch is a potential host. Some chimes scream for you from across an expanse. Large or loud. Others are experts in camouflage, as if they were species native to the Vale, perfectly blended. The chimes come in all forms and materials, hard and soft, objects recycled and refabricated to hang and collide with each other at the slightest disturbance. Without the wind blowing, they invite you to touch. You must graze, lightly prod, slightly destabilize them to release their sounds. Hear their rumbles and whispers, feel their different textures. The trees have alarms. The Vale is an instrument now.
-    </p>
+    <!-- <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed//GO422Q3kscU' frameborder='0' allowfullscreen></iframe></div> -->
+    <section class="images">
+      <div class="image">
+        <img src="irl-festival/windchime-1.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-2.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-3.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-4.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-5.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-6.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-7.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-8.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-9.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-10.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-11.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-12.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-13.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-14.jpg" class="thumb">
+      </div>
+      <!-- <div class="image">
+        <video width="100%" height="100%" controls>
+         <source src="irl-festival/windchime-15.mp4" type="video/mp4">
+        </video>
+      </div> -->
+      <div class="image">
+        <img src="irl-festival/windchime-16.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-17.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-18.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-19.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-20.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-21.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-22.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-23.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-24.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-25.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-26.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-27.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-28.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-29.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-30.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-31.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-32.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-33.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-34.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-35.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-36.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-37.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-38.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-39.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-40.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-41.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-42.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-43.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-44.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-45.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-46.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-47.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-48.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-49.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-50.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-51.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-52.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-53.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-54.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-55.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-56.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/windchime-57.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <!-- <img src="irl-festival/windchime-57.jpg" class="thumb"> -->
+      </div>
+    </section>
+    <section class="text">
+      <p>
+        The wind chimes reveal themselves slowly. Beacons tucked into corners, on the next little ridge, up the path, hidden right above your head. You must keep your eyes peeled. Ask questions. Watch the flow of others on their visits and discoveries. The wind chimes and their creators surround you by the very fact of geology in the Vale of Cashmere. The vale is a dip in the earth, a hole created by a glacier melting 17,000 years ago and tearing rock and soil into an arena of blue and green. You walk in the center, around the pond, ringed by trees, braving short distances of sun. Each branch is a potential host. Some chimes scream for you from across an expanse. Large or loud. Others are experts in camouflage, as if they were species native to the Vale, perfectly blended. The chimes come in all forms and materials, hard and soft, objects recycled and refabricated to hang and collide with each other at the slightest disturbance. Without the wind blowing, they invite you to touch. You must graze, lightly prod, slightly destabilize them to release their sounds. Hear their rumbles and whispers, feel their different textures. The trees have alarms. The Vale is an instrument now.
+      </p>
+    </section>
+    <video width="100%" height="100%" controls>
+     <source src="irl-festival/shells.mp4" type="video/mp4">
+    </video>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GO422Q3kscU?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <section class="images pola">
+      <div class="image">
+        <img src="irl-festival/pola01.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola03.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola04.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola05.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola06.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola07.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola08.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola09.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola10.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola11.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola12.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola13.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola14.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola15.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola16.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola17.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola18.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola19.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola20.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola21.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola22.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola23.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola24.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola25.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola26.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola27.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola28.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola29.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola30.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola31.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola32.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola33.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola34.jpg" class="thumb">
+      </div>
+      <div class="image">
+        <img src="irl-festival/pola02.jpg" class="thumb">
+      </div>
+      <div class="image">
+      </div>
+    </section>
+    <!-- <section class="text">
+      <p style="text-align: center;">
+        Thanks to all particicipants for spending such a lovely day together.
+      </p>
+    </section> -->
+    <section class="text">
+      <p class="gray" style="text-align: center;">
+        Special thanks to Max Neely-Cohen for the written reflection and Cindy Hwang for the video recording.
+      </p>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    $(function() {
+      $('.image').click(function(){
+        $(this).toggleClass('large');
+      });
+    });
+    </script>
   </body>
 </html>

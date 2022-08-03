@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Wind Chime Festival</title>
+    <title>wind chime festival</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -14,21 +14,108 @@
     <link rel="stylesheet" href="style.css?334" />
   </head>
 
-  <body style="height: auto;">
-    <!-- <img src="wind-chime-nyc-invite.png" alt="wind chime festival nyc, saturday may 21st, vale of cashmere, 11am-4pm"><br><br>
-    <a href="irl-festival/index.html" style="font-size: 0.75em; text-decoration: none; border: 1px solid black; color: black; padding: 5px 8px; display: inline-block; margin: 0 5px 5px 0;">Link to IRL Festival info in Google Doc</a><br>
-    <a href="vale-map-for-wind-chime-festival.pdf" style="font-size: 0.75em; text-decoration: none; border: 1px solid black; color: black; padding: 5px 8px; display: inline-block; margin: 0 5px 5px 0;">Link to PDF map of Vale of Cashmere</a><br>
-    <br><br> -->
-    <div>
-      welcome to the (virtual) world wide wind chime festial, from may 21 – july 31, 2022.
-      for the full experience, please visit this website
-      (https://windchime.world) on a desktop browser!
+  <body class="menu">
+    <div class="title slide" id="title">
+      welcome to windchime.world,<br><br>
+      the online home of the<br><br>
+      wind chime festival<br><br>
+      <!-- we are *live* at 6pm PST / 9pm EST in mark beasley's portal -->
+      <div id="presence">the 2022 festivals are now behind us. you can visit this website (http://windchime.world) on a desktop computer to experience documentation from both events.
+      </div>
+      <a href="#menu" class="menu button">( menu )</a>
     </div>
-    <br>
-    <iframe src="https://vi49k6.csb.app/?cam=0" id="mobile"> </iframe>
+    <div class="menu-options slide" id="menu">
+      <a href="mobile-menu-about.html">( about )</a><br /><br />
+      <a href="mobile-menu-irl.html">( irl events )</a><br /><br />
+      <a href="mobile-menu-virtual.html">( virtual exhibition )</a><br /><br />
+      <a href="mobile-menu-subscribe.html">( subscribe )</a><br><br>
+      <a href="mobile-menu-support.html">( support )</a>
+      <a href="#title" class="menu">( x )</a>
+    </div>
   </body>
   <script>
-    let iframe = document.getElementById("mobile");
-    iframe.src = `https://vi49k6.csb.app/?cam=${(Math.random() * 9) | 0}`;
+    let presence = document.getElementById("presence");
+    const socket = new WebSocket("wss://wind-chime.maxbittker.repl.co");
+
+    let prevCount = 0;
+    socket.addEventListener("message", function (e) {
+      console.log(e.data);
+      let count = parseInt(e.data, 10);
+      // if (count > 1) {
+      //   presence.innerText = "( " + count + " are here )";
+      // } else {
+      //   presence.innerText = "( you are the only one here )";
+      // }
+
+      if (prevCount !== count) {
+        const event = new Event("enter");
+        document.dispatchEvent(event);
+      }
+      prevCount = count;
+    });
+    let pingTimeout;
+    socket.addEventListener("open", function (e) {
+      console.log("opened");
+      heartbeat();
+    });
+
+    function heartbeat() {
+      clearTimeout(this.pingTimeout);
+      pingTimeout = setTimeout(() => {
+        heartbeat();
+      }, 5000);
+    }
+
+    socket.addEventListener("close", function clear() {
+      clearTimeout(pingTimeout);
+    });
+
+    const sounds = [
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325014__kilo-one-nine__toy-glock-01.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325013__kilo-one-nine__toy-glock-02.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325012__kilo-one-nine__toy-glock-03.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325011__kilo-one-nine__toy-glock-04.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325018__kilo-one-nine__toy-glock-05.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325017__kilo-one-nine__toy-glock-06.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325016__kilo-one-nine__toy-glock-07.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325015__kilo-one-nine__toy-glock-08.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325020__kilo-one-nine__toy-glock-09.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325019__kilo-one-nine__toy-glock-10.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325029__kilo-one-nine__toy-glock-11.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325028__kilo-one-nine__toy-glock-12.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325027__kilo-one-nine__toy-glock-13.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325026__kilo-one-nine__toy-glock-14.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325033__kilo-one-nine__toy-glock-15.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325032__kilo-one-nine__toy-glock-16.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325031__kilo-one-nine__toy-glock-17.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325030__kilo-one-nine__toy-glock-18.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325035__kilo-one-nine__toy-glock-19.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325034__kilo-one-nine__toy-glock-20.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325023__kilo-one-nine__toy-glock-21.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325024__kilo-one-nine__toy-glock-22.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325021__kilo-one-nine__toy-glock-23.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325022__kilo-one-nine__toy-glock-24.mp3",
+      "https://spring.restnotes.email/assets/sounds/toy-glock/325025__kilo-one-nine__toy-glock-25.mp3"
+    ];
+
+    let soundBin = [];
+    const events = ["mousedown", "enter", "leave"]; // 'keyup' is pretty wild haha
+
+    const playSound = (s, a) => {
+      const audio = document.createElement("audio");
+      audio.src = s;
+      audio.volume = a;
+      audio.play();
+    };
+
+    events.forEach((evt) => {
+      document.addEventListener(evt, (e) => {
+        if (e.type === "enter") {
+          playSound(sounds[prevCount % sounds.length], 0.15);
+        } else if (e.type === "mousedown") {
+          playSound(sounds[(e.pageX + e.pageY) % sounds.length], 0.01);
+        }
+      });
+    });
   </script>
 </html>

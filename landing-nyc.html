@@ -8,9 +8,89 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
     />
     <link rel="stylesheet" href="style.css?334" />
+    <style>
+    html, body { overflow: hidden; }
+    body {
+      background:url('irl-festival/windchime-13.jpg');
+      background-size: cover;
+      margin: 0;
+      color: white;
+      /* font-size: 12.5vw;
+      text-shadow: 0px 0px 5px #000; */
+    }
+    .info {
+      text-align: center;
+      background: #d1d0cf;
+      color: #d1d0cf;
+      padding: 10vw 8.5vw;
+      box-shadow: 0px 0px 12px rgba(0,0,0,0.5);
+      position: relative;
+    }
+    .poster {
+      -webkit-text-stroke: 1px black;
+      font-family: "Monotype Corsiva", cursive;
+      font-size: 10vw;
+      line-height: 1;
+      text-transform: none;
+      pointer-events: none;
+    }
+    .label {
+      position: absolute;
+      padding: 1em;
+      left: 0;
+      right: 0;
+      top: 0;
+      text-align: center;
+      color: black;
+    }
+    a.everywhere {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 3;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    a.everywhere .info,
+    a.everywhere .poster,
+    a.everywhere .green {
+      transition: .1s background ease-out;
+      -webkit-transition: .1s background ease-out;
+      -moz-transition: .1s background ease-out;
+      -o-transition: .1s background ease-out;
+    }
+    a.everywhere:hover .info {
+      background: white;
+    }
+    a.everywhere:hover .poster {
+      color: #6385C8;
+      -webkit-text-stroke: 1px transparent;
+    }
+    a.everywhere:hover .poster .green {
+      color: #63AD57;
+    }
+    </style>
   </head>
 
   <body>
-    hiiii nyc
+    <a class="everywhere" href="index-nyc.html" target="_parent">
+    <div>
+      <div class="info">
+        <div class="label">( irl )</div>
+        <div class="poster">
+          w<span class="green">in</span>d chi<span class="green">m</span>e<br>
+          f<span class="green">e</span>stiv<span class="green">a</span>l <span class="green">N</span>YC<br>
+          <span class="green">ma</span>y 21, 20<span class="green">22</span><br>
+          <!-- vale of cashmere<br> -->
+          <!-- 11am – 4pm -->
+        </div>
+      </div>
+    </div>
+    </a>
   </body>
 </html>

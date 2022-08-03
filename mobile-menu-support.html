@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wind Chime Festival</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <link
+      href="https://unpkg.com/video.js/dist/video-js.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?334" />
+  </head>
+
+  <body class="menu content">
+    <div class="slide" id="top">
+      ( support ) <a href="mobile.html#menu" class="menu return">( x )</a
+      ><br /><br />
+      We are thankful to individual donors and Princeton University for their
+      generous support.
+      <br /><br />
+      Individual donors adopt a level of the
+      <a href="https://en.wikipedia.org/wiki/Beaufort_scale" target="_blank"
+        >Beaufort Wind Scale</a
+      >, used by sailors and first devised in 1805 by the English naval
+      commander Francis Beaufort. The scale begins at 0, which is a wind speed
+      too slow to move a ship at all, and ends at number 12, which indicates a
+      wind speed too high for the ship to carry any canvas. <br /><br />
+
+      <table class="artist">
+        <tr>
+          <td class="gray">Sponsor</td>
+          <td class="gray">Force & classification</td>
+        </tr>
+        <tr>
+          <td>hyperlink.academy</td>
+          <td>0 - Calm</td>
+        </tr>
+        <tr>
+          <td>John Palmer</td>
+          <td>1 - Light Air</td>
+        </tr>
+        <tr>
+          <td>Paragonday Systems</td>
+          <td>2 - Light Breeze</td>
+        </tr>
+        <tr>
+          <td>Mattie Goedecke</td>
+          <td>3 - Gentle Breeze</td>
+        </tr>
+        <tr>
+          <td>Harm van den Dorpel</td>
+          <td>4 - Moderate Breeze</td>
+        </tr>
+        <tr>
+          <td>
+            Omar Rizwan
+            <!-- <br />Distinguished Endowed Nest Camera -->
+          </td>
+          <td>5 - Fresh Breeze</td>
+        </tr>
+
+        <tr>
+          <td>Callil Capuozzo</td>
+          <td>6 - Strong Breeze</td>
+        </tr>
+        <tr>
+          <td>Linked by Air</td>
+          <td>7 - Near Gale</td>
+        </tr>
+        <tr>
+          <td>David Allin Reese</td>
+          <td>8 - Gale</td>
+        </tr>
+        <tr>
+          <td>Mattie Goedecke</td>
+          <td>9 - Strong Gale</td>
+        </tr>
+        <tr>
+          <td>Austin Wade Smith</td>
+          <td>10 - Storm</td>
+        </tr>
+        <tr>
+          <td>Dragan Espenschied<!-- thank you very much dragan!--></td>
+          <td>11 - Violent Storm</td>
+        </tr>
+        <tr>
+          <td>
+            Municipal Geology
+          </td>
+          <td>12 - Hurricane</td>
+        </tr>
+      </table>
+      Currently, all levels of the Beaufort Wind Scale are adopted. You can also <a href="https://buy.stripe.com/28o2aLgUKaBM9iMeVa" target="_blank">donate separately here</a>. Thank you!
+      <br><br>
+      Special thanks to Max Bittker (for website programming assistance) and
+      Michelle Lin (for creating the website’s font — “Waxwing”), and Sulki &
+      Min (website's use of frames inspiration).
+      <br /><br />
+      <a href="#top" class="return">( ^ )</a>
+    </div>
+    <script>
+    const hours = new Date().getHours();
+    const isDayTime = hours > 6 && hours < 20;
+    if (isDayTime) {
+      document.body.classList.add("day");
+    } else {
+      document.body.classList.add("night");
+    }
+    </script>
+  </body>
+</html>

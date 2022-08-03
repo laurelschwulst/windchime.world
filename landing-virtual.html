@@ -8,9 +8,78 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
     />
     <link rel="stylesheet" href="style.css?334" />
+    <style>
+    body {
+
+    }
+    .virtual {
+      max-width: 450px;
+      padding: 1.5em;
+      /* border: 1px solid #000; */
+      box-shadow: 0px 0px 12px rgba(0,0,0,0.25);
+    }
+    .label {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    .range {
+      text-align: center;
+      margin-top: 2.5em;
+    }
+    a.everywhere {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: black;
+      text-decoration: none;
+    }
+    .image {
+      transition: .1s background ease-out;
+      -webkit-transition: .1s background ease-out;
+      -moz-transition: .1s background ease-out;
+      -o-transition: .1s background ease-out;
+    }
+    .image {
+      background: url('www-true.png');
+      width: 400px;
+      height: 200px;
+      background-size: 100% auto;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+    a.everywhere:hover .image {
+      background: url('www-true-shuffle.png');
+      width: 400px;
+      height: 200px;
+      background-size: 100% auto;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+    </style>
   </head>
 
   <body>
-    hiiii virtual
+    <a class="everywhere" href="index-virtual.html" target="_parent">
+    <div class="virtual">
+      <div class="label">( virtual )</div>
+      <div class="image"></div>
+      <!-- world<br>
+      wide<br>
+      wind<br>
+      chime<br>
+      festival<br><br> -->
+      <div class="range">may 21 - july 31, 2022</div>
+    </div>
+    <!-- virtual ...
+    world wide wind chime festival
+    may 21 - july 31, 2022 -->
+    </a>
   </body>
 </html>

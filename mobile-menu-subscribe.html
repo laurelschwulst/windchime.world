@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wind Chime Festival</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <link
+      href="https://unpkg.com/video.js/dist/video-js.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?334" />
+  </head>
+
+  <body class="menu content">
+    <div class="slide" id="top">
+      ( subscribe ) <a href="mobile.html#menu" class="menu return">( x )</a
+      ><br /><br />
+      feel free to <a href="https://airtable.com/shrxaoIOTFIwxl68C" target="_blank" class="plain">sign up for our mailing list</a> for any future announcements.
+      <!-- <a href="#top" class="return">( ^ )</a> -->
+    </div>
+    <script>
+    const hours = new Date().getHours();
+    const isDayTime = hours > 6 && hours < 20;
+    if (isDayTime) {
+      document.body.classList.add("day");
+    } else {
+      document.body.classList.add("night");
+    }
+    </script>
+  </body>
+</html>
