@@ -12,6 +12,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css?334" />
+    <style>
+    #presence { display: none; }
+    html, body { background: #888888 !important; color: white !important; }
+    a { color: white !important; }
+    </style>
   </head>
 
   <body class="menu">
@@ -35,6 +40,7 @@
       <a href="#title" class="menu">( x )</a>
     </div>
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
     let presence = document.getElementById("presence");
     const socket = new WebSocket("wss://wind-chime.maxbittker.repl.co");
@@ -118,6 +124,11 @@
           playSound(sounds[(e.pageX + e.pageY) % sounds.length], 0.01);
         }
       });
+    });
+    $(function(){
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        $('#presence').show();
+      }
     });
   </script>
 </html>

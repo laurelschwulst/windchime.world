@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Wind Chime Festival</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <link rel="stylesheet" href="style.css?334" />
+  <style>
+  body {
+    background: url('https://irl.windchime.world/irl-festival/windchime-20.jpg');
+    background-size: cover;
+    background-position: center center;
+    text-transform: none;
+  }
+  span {
+    background: #D1D0CF;
+    /* color: #D1D0CF; */
+    /* -webkit-text-stroke: 0.25px black; */
+  }
+  a#everywhere {
+    text-decoration: none;
+    display: block;
+    color: black;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+  </style>
+</head>
+
+<body class="menu">
+  <div class="title slide">
+    <span>[ irl ]</span><br /><br />
+    <span>wind chime festival NYC</span><br><br>
+    <span>5.21.2022</span><br><br>
+    <!-- <img src="https://irl.windchime.world/poster02.png" width="175" style="background: #fff;"> -->
+  </div>
+  <a href="http://irl.windchime.world" target="_blank" id="everywhere"></a>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+
+  function generateRandom(maxLimit = 60){
+    let rand = Math.random() * maxLimit;
+    console.log(rand); // say 99.81321410836433
+
+    rand = Math.floor(rand); // 99
+
+    return rand + 1;
+  }
+  var x = generateRandom(); // 43
+  console.log(x);
+
+  var imagelink = "https://irl.windchime.world/irl-festival/windchime-" + x + ".jpg";
+  console.log(imagelink);
+
+  function changeImage(){
+    $('body').css("background-image", "url(" + imagelink + ")");
+  }
+
+  $(function(){
+    changeImage();
+  });
+
+</script>
+</body>
+
+</html>

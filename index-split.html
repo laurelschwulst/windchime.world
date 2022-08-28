@@ -1,0 +1,124 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>world wide wind chime festivals</title>
+  <meta name="author" content="Laurel Schwulst & Ellie Hunter">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="world wide wind chime festivals">
+  <meta property="og:title" content="world wide wind chime festivals">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="artist-made wind chime festivals">
+  <meta property="og:url" content="http://windchime.world">
+  <meta property="og:image" content="http://windchime.world/wind-chime-festival.png">
+  <meta property="og:site_name" content="world wide wind chime festivals">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="world wide wind chime festivals">
+  <meta name="twitter:description" content="artist-made wind chime festivals">
+  <meta name="twitter:image" content="http://windchime.world/wind-chime-festival.png">
+  <script>
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    redirect:window.location.replace("https://windchime.world/mobile.html");
+  }
+  </script>
+  <style>
+    @font-face {
+      font-family: "waxwing-2020";
+      src: url("./fonts/waxwing-regular-update-2020-webfont.woff2") format("woff2"),
+        url("./fonts/waxwing-regular-update-2020-webfont.woff") format("woff");
+      font-weight: normal;
+      font-style: normal;
+    }
+    html,
+    body {
+      font-family: "waxwing-2020", monospace;
+      font-size: 13.5px;
+      text-transform: lowercase;
+      margin: 0;
+    }
+    .welcome {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:rgba(0,0,0,0.25);
+      transition: .1s all ease-out;
+      -webkit-transition: .1s all ease-out;
+      -moz-transition: .1s all ease-out;
+      -o-transition: .1s all ease-out;
+    }
+    .welcome.gone {
+      background:rgba(0,0,0,0);
+    }
+    .message {
+      padding: 2.5em;
+      background: #d1d0cf;
+      box-shadow: 0px 0px 12px rgba(0,0,0,0.25);
+      max-width: 400px;
+    }
+    .message a {
+      color: black;
+      text-decoration: none;
+    }
+    iframe {
+      height: 100vh;
+      width: 100vw;
+      border: 0;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      /* pointer-events: none; */
+      -webkit-filter: blur(5px);
+      filter: blur(5px);
+      transition: .1s all ease-out;
+      -webkit-transition: .1s all ease-out;
+      -moz-transition: .1s all ease-out;
+      -o-transition: .1s all ease-out;
+    }
+    iframe.active {
+      -webkit-filter: none !important;
+      filter: none !important;
+      pointer-events: all !important;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="welcome">
+    <div class="message">
+      welcome to
+      windchime.world,
+      the online home
+      of the
+      wind chime festival. the 2022 wind chime festivals are now behind us.
+      now this website is mostly an archive of both the irl and virtual festivals.
+      <!-- feel free to <a href="https://airtable.com/shrxaoIOTFIwxl68C" target="_blank" class="plain">( sign up for our mailing list )</a> for any future announcements. -->
+      <br><br>
+      <a href="#" id="continue" class="button plain">( continue )</a>
+    </div>
+  </div>
+  <iframe src="home.html" height="100" width="100" border="0"></iframe>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    $(function() {
+      $('a#continue').click(function(){
+        $('.message').fadeOut('fast');
+        $('.welcome').addClass('gone');
+        $('iframe').addClass('active');
+      });
+    });
+    </script>
+</body>
+</html>

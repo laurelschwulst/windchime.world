@@ -20,46 +20,38 @@
   <meta name="twitter:image" content="http://windchime.world/wind-chime-festival.png">
   <script>
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    redirect:window.location.replace("https://windchime.world/mobile.html");
+    redirect:window.location.replace("https://windchime.world/mobile-two.html");
   }
   </script>
-  <frameset rows="*, *, *">
-
-	<frameset cols="25%, 25%, 25%, 25%">
-
-		<frame src="mobile.html" name="menu" scrolling="none">
-
-		<frame src="nothing.html" name="empty" scrolling="AUTO">
-
-    <frame src="nothing.html" name="empty" scrolling="AUTO">
-
-    <frame src="nothing.html" name="empty" scrolling="AUTO">
-
-	</frameset>
-
-	<frameset cols="25%, 25%, 25%, 25%">
-
-    <frame src="nothing.html" name="empty" scrolling="AUTO">
-
-		<frame src="portal-virtual.html" name="virtual" scrolling="AUTO">
-
-		<frame src="portal-irl.html" name="nyc" scrolling="AUTO">
-
-    <frame src="nothing.html" name="empty" scrolling="AUTO">
-
-	</frameset>
-
-	<frameset cols="25%, 25%, 25%, 25%">
-
-    <frame src="nothing.html" name="empty" scrolling="AUTO">
-
-    <frame src="nothing.html" name="empty" scrolling="AUTO">
-
-    <frame src="nothing.html" name="empty" scrolling="AUTO">
-
-    <frame src="nothing.html" name="empty" scrolling="AUTO">
-
-	</frameset>
-
-</frameset><noframes></noframes>
+  <style>
+  html, body { background: #D1D0CF; }
+  iframe {
+    border: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+  iframe#one {
+    position: absolute;
+    top: 0.75em;
+    left: 0.75em;
+    right: 0.75em;
+    height: calc(50vh - 1.25em);
+    width: calc(100vw - 1.5em);
+  }
+  iframe#two {
+    position: absolute;
+    bottom: 0.75em;
+    left: 0.75em;
+    right: 0.75em;
+    height: calc(50vh - 1.25em);
+    width: calc(100vw - 1.5em);
+  }
+  </style>
+</head>
+<body>
+  <iframe src="portal-irl.html" id="one"></iframe>
+  <iframe src="portal-virtual.html" id="two"></iframe>
+</body>
 </html>
