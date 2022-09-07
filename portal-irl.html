@@ -39,7 +39,7 @@
     <span>5.21.2022</span><br><br>
     <!-- <img src="https://irl.windchime.world/poster02.png" width="175" style="background: #fff;"> -->
   </div>
-  <a href="http://irl.windchime.world" target="_blank" id="everywhere"></a>
+  <a href="http://irl.windchime.world" target="_parent" id="everywhere"></a>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
@@ -52,18 +52,21 @@
 
     return rand + 1;
   }
-  var x = generateRandom(); // 43
-  console.log(x);
 
-  var imagelink = "https://irl.windchime.world/irl-festival/windchime-" + x + ".jpg";
-  console.log(imagelink);
 
   function changeImage(){
+    var x = generateRandom(); // 43
+    console.log(x);
+
+    var imagelink = "https://irl.windchime.world/irl-festival/windchime-" + x + ".jpg";
+
     $('body').css("background-image", "url(" + imagelink + ")");
   }
 
   $(function(){
     changeImage();
+
+    // window.setInterval(()=>changeImage(), 5000);
   });
 
 </script>

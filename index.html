@@ -1,65 +1,55 @@
-<html>
-
+<!DOCTYPE html>
 <head>
-  <meta charset="utf-8">
-  <title>world wide wind chime festivals</title>
-  <meta name="author" content="Laurel Schwulst & Ellie Hunter">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="world wide wind chime festivals">
-  <meta property="og:title" content="world wide wind chime festivals">
-  <meta property="og:type" content="website">
-  <meta property="og:description" content="artist-made wind chime festivals">
-  <meta property="og:url" content="http://windchime.world">
-  <meta property="og:image" content="http://windchime.world/wind-chime-festival.png">
-  <meta property="og:site_name" content="world wide wind chime festivals">
-  <meta property="og:locale" content="en_US">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="world wide wind chime festivals">
-  <meta name="twitter:description" content="artist-made wind chime festivals">
-  <meta name="twitter:image" content="http://windchime.world/wind-chime-festival.png">
-  <script>
-  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    redirect:window.location.replace("https://windchime.world/mobile.html");
-  }
-  </script>
-  <frameset rows="*, *, *">
+   <meta charset="utf-8">
+   <title>world wide wind chime festivals</title>
+   <meta name="author" content="Laurel Schwulst & Ellie Hunter">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:title" content="world wide wind chime festivals">
+   <meta property="og:title" content="world wide wind chime festivals">
+   <meta property="og:type" content="website">
+   <meta property="og:description" content="artist-made wind chime festivals">
+   <meta property="og:url" content="http://windchime.world">
+   <meta property="og:image" content="http://windchime.world/wind-chime-festival.png">
+   <meta property="og:site_name" content="world wide wind chime festivals">
+   <meta property="og:locale" content="en_US">
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:title" content="world wide wind chime festivals">
+   <meta name="twitter:description" content="artist-made wind chime festivals">
+   <meta name="twitter:image" content="http://windchime.world/wind-chime-festival.png">
+   <script>
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+       document.addEventListener("DOMContentLoaded", ()=>{
+       document.getElementById("target").innerHTML = `
+       <frame src="mobile.html" name="menu" scrolling="none">
+       <frame src="portal-virtual.html" name="virtual" scrolling="AUTO">
+       <frame src="portal-irl.html" name="nyc" scrolling="AUTO">
+       <frame src="nothing.html" name="empty" scrolling="AUTO">
+       `});
+      }
+   </script>
+<!-- <body> -->
+   <frameset rows="*, *, *" id="target">
+      <frameset cols="25%, 25%, 25%, 25%">
+         <frame src="mobile.html" name="menu" scrolling="none">
+         <frame src="nothing.html" name="empty" scrolling="AUTO">
+         <frame src="nothing.html" name="empty" scrolling="AUTO">
+         <frame src="nothing.html" name="empty" scrolling="AUTO">
+      </frameset>
+      <frameset cols="25%, 25%, 25%, 25%">
+         <frame src="nothing.html" name="empty" scrolling="AUTO">
+         <frame src="portal-virtual.html" name="virtual" scrolling="AUTO">
+         <frame src="portal-irl.html" name="nyc" scrolling="AUTO">
+         <frame src="nothing.html" name="empty" scrolling="AUTO">
+      </frameset>
+      <frameset cols="25%, 25%, 25%, 25%">
+         <frame src="nothing.html" name="empty" scrolling="AUTO">
+         <frame src="nothing.html" name="empty" scrolling="AUTO">
+         <frame src="nothing.html" name="empty" scrolling="AUTO">
+         <frame src="nothing.html" name="empty" scrolling="AUTO">
+      </frameset>
+   </frameset>
+<!-- </body> -->
 
-	<frameset cols="25%, 25%, 25%, 25%">
-
-		<frame src="mobile.html" name="menu" scrolling="none">
-
-		<frame src="nothing.html" name="empty" scrolling="AUTO">
-
-    <frame src="nothing.html" name="empty" scrolling="AUTO">
-
-    <frame src="nothing.html" name="empty" scrolling="AUTO">
-
-	</frameset>
-
-	<frameset cols="25%, 25%, 25%, 25%">
-
-    <frame src="nothing.html" name="empty" scrolling="AUTO">
-
-		<frame src="portal-virtual.html" name="virtual" scrolling="AUTO">
-
-		<frame src="portal-irl.html" name="nyc" scrolling="AUTO">
-
-    <frame src="nothing.html" name="empty" scrolling="AUTO">
-
-	</frameset>
-
-	<frameset cols="25%, 25%, 25%, 25%">
-
-    <frame src="nothing.html" name="empty" scrolling="AUTO">
-
-    <frame src="nothing.html" name="empty" scrolling="AUTO">
-
-    <frame src="nothing.html" name="empty" scrolling="AUTO">
-
-    <frame src="nothing.html" name="empty" scrolling="AUTO">
-
-	</frameset>
-
-</frameset><noframes></noframes>
+<noframes></noframes>
 </html>
