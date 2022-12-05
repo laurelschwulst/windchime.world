@@ -41,12 +41,12 @@ let videoDatas = [
     name: "Weiyi Li",
     place: "Beijing, China",
     src: [
-      "https://seashell.family/videos/weiyi-2am.mp4",
-      "https://seashell.family/videos/weiyi-6am.mp4",
-      "https://seashell.family/videos/weiyi-10am.mp4",
-      "https://seashell.family/videos/weiyi-2pm.mp4",
-      "https://seashell.family/videos/weiyi-6pm.mp4",
-      "https://seashell.family/videos/weiyi-10pm.mp4"
+      "https://laurel.world/videos/weiyi-2am.mp4",
+      "https://laurel.world/videos/weiyi-6am.mp4",
+      "https://laurel.world/videos/weiyi-10am.mp4",
+      "https://laurel.world/videos/weiyi-2pm.mp4",
+      "https://laurel.world/videos/weiyi-6pm.mp4",
+      "https://laurel.world/videos/weiyi-10pm.mp4"
     ],
     gmtOffset: 8
   },
@@ -54,12 +54,12 @@ let videoDatas = [
     name: "Oliver Hull",
     place: "Melbourne, Australia",
     src: [
-      "https://seashell.family/videos/oliver-10pm.mp4",
-      "https://seashell.family/videos/oliver-6am.mp4",
-      "https://seashell.family/videos/oliver-10am.mp4",
-      "https://seashell.family/videos/oliver-2pm.mp4",
-      "https://seashell.family/videos/oliver-6pm.mp4",
-      "https://seashell.family/videos/oliver-10pm.mp4"
+      "https://laurel.world/videos/oliver-10pm.mp4",
+      "https://laurel.world/videos/oliver-6am.mp4",
+      "https://laurel.world/videos/oliver-10am.mp4",
+      "https://laurel.world/videos/oliver-2pm.mp4",
+      "https://laurel.world/videos/oliver-6pm.mp4",
+      "https://laurel.world/videos/oliver-10pm.mp4"
     ],
     gmtOffset: 10,
     volume: 0.2
@@ -68,14 +68,14 @@ let videoDatas = [
     name: "Lola Orge Benech",
     place: "Buenos Aires, Argentina",
     src: [
-      "https://seashell.family/videos/lola-10pm.mp4",
-      "https://seashell.family/videos/lola-7am.mp4",
-      "https://seashell.family/videos/lola-11am.mp4",
-      "https://seashell.family/videos/lola-2pm.mp4",
-      // "https://seashell.family/videos/lola-6pm.mp4",
-      "https://seashell.family/videos/lola-7pm.mp4",
-      // "https://seashell.family/videos/lola-8pm.mp4",
-      "https://seashell.family/videos/lola-10pm.mp4"
+      "https://laurel.world/videos/lola-10pm.mp4",
+      "https://laurel.world/videos/lola-7am.mp4",
+      "https://laurel.world/videos/lola-11am.mp4",
+      "https://laurel.world/videos/lola-2pm.mp4",
+      // "https://laurel.world/videos/lola-6pm.mp4",
+      "https://laurel.world/videos/lola-7pm.mp4",
+      // "https://laurel.world/videos/lola-8pm.mp4",
+      "https://laurel.world/videos/lola-10pm.mp4"
     ],
     gmtOffset: -3,
     volume: 0.01
@@ -111,14 +111,14 @@ let videoDatas = [
     gmtOffset: 9,
     poster: "snapshot-hiroki.png",
     src: [
-      "https://seashell.family/videos/hiroki-12am.mp4",
-      "https://seashell.family/videos/hiroki-12am.mp4",
-      "https://seashell.family/videos/hiroki-9am.mp4",
-      "https://seashell.family/videos/hiroki-12pm.mp4",
-      "https://seashell.family/videos/hiroki-3pm.mp4",
-      "https://seashell.family/videos/hiroki-6pm.mp4",
-      "https://seashell.family/videos/hiroki-9pm.mp4",
-      "https://seashell.family/videos/hiroki-12am.mp4"
+      "https://laurel.world/videos/hiroki-12am.mp4",
+      "https://laurel.world/videos/hiroki-12am.mp4",
+      "https://laurel.world/videos/hiroki-9am.mp4",
+      "https://laurel.world/videos/hiroki-12pm.mp4",
+      "https://laurel.world/videos/hiroki-3pm.mp4",
+      "https://laurel.world/videos/hiroki-6pm.mp4",
+      "https://laurel.world/videos/hiroki-9pm.mp4",
+      "https://laurel.world/videos/hiroki-12am.mp4"
     ],
     volume: 0.5
   }
